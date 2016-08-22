@@ -45,24 +45,14 @@ var sanitizeNames = _.map(_.compose(_underscore, _.toLower, _.prop('name')));
 // ============
 // Refactor availablePrices with compose.
 
-var availablePrices = function(cars) {
-  var available_cars = _.filter(_.prop('in_stock'), cars);
-  return available_cars.map(function(x){
-    return accounting.formatMoney(x.dollar_value)
-  }).join(', ');
-};
+var availablePrices = _.compose(_.join(', '), _.map(_.compose(accounting.formatMoney, _.prop('dollar_value'))), _.filter(_.prop('in_stock')));
 
 
 // Bonus 2:
 // ============
 // Refactor to pointfree. Hint: you can use _.flip()
 
-var fastestCar = function(cars) {
-  var sorted = _.sortBy(function(car){ return car.horsepower }, cars);
-  var fastest = _.last(sorted);
-  return fastest.name + ' is the fastest';
-};
-
+var fastestCar =  _.compose(n => n + ' is the fastest', _.prop('name'), _.last, _.sortBy(_.prop('horsepower')));
 
 module.exports = { CARS: CARS,
                    isLastInStock: isLastInStock,
