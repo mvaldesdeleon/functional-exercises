@@ -6,24 +6,20 @@ var _ = require('ramda');
 //==============
 // Refactor to remove all arguments by partially applying the function
 
-var words = function(str) {
-  return split(' ', str);
-};
+var words = split(' ');
 
 // Exercise 1a
 //==============
 // Use map to make a new words fn that works on an array of strings.
 
-var sentences = undefined;
+var sentences = map(words);
 
 
 // Exercise 2
 //==============
 // Refactor to remove all arguments by partially applying the functions
 
-var filterQs = function(xs) {
-  return filter(function(x){ return match(/q/i, x);  }, xs);
-};
+var filterQs = filter(match(/q/i));
 
 
 // Exercise 3
@@ -34,11 +30,7 @@ var filterQs = function(xs) {
 var _keepHighest = function(x,y){ return x >= y ? x : y; };
 
 // REFACTOR THIS ONE:
-var max = function(xs) {
-  return reduce(function(acc, x){
-    return _keepHighest(acc, x);
-  }, -Infinity, xs);
-};
+var max = reduce(_keepHighest, -Infinity);
 
 
 // Bonus 1:
