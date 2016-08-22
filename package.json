@@ -2,7 +2,6 @@
   "name": "functional-exercises",
   "version": "0.0.1",
   "description": "Exercises for drboolean`s functional programming book.",
-  "main": "index.js",
   "scripts": {
     "test": "mocha **/*_spec.js"
   },
