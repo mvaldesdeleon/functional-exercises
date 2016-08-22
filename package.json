@@ -1,0 +1,30 @@
+{
+  "name": "functional-exercises",
+  "version": "0.0.1",
+  "description": "Exercises for drboolean`s functional programming book.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha **/*_spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mvaldesdeleon/functional-exercises.git"
+  },
+  "keywords": [
+    "functional programming"
+  ],
+  "author": "Martín Valdés de León <m.valdesdeleon@gmail.com>",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/mvaldesdeleon/functional-exercises/issues"
+  },
+  "homepage": "https://github.com/mvaldesdeleon/functional-exercises#readme",
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
