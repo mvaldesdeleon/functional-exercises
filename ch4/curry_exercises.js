@@ -37,13 +37,13 @@ var max = reduce(_keepHighest, -Infinity);
 // ============
 // wrap array's slice to be functional and curried.
 // //[1,2,3].slice(0, 2)
-var slice = undefined;
+var slice = start => end => list => list.slice(start,end);
 
 
 // Bonus 2:
 // ============
 // use slice to define a function "take" that takes n elements. Make it curried
-var take = undefined;
+var take = slice(0);
 
 
 module.exports = { words: words,
