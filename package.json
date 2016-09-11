@@ -20,6 +20,7 @@
   "homepage": "https://github.com/mvaldesdeleon/functional-exercises#readme",
   "dependencies": {
     "accounting": "^0.4.1",
+    "data.task": "^3.1.1",
     "ramda": "^0.22.1"
   },
   "devDependencies": {
